@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="GaK-vv-N8W">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pCb-FC-Jbp">
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zle-Je-kjT"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zle-Je-kjT" firstAttribute="bottom" secondItem="pCb-FC-Jbp" secondAttribute="bottom" id="1tP-mq-ZTe"/>
+                            <constraint firstItem="zle-Je-kjT" firstAttribute="trailing" secondItem="pCb-FC-Jbp" secondAttribute="trailing" id="Hn1-dN-F1P"/>
+                            <constraint firstItem="pCb-FC-Jbp" firstAttribute="top" secondItem="zle-Je-kjT" secondAttribute="top" id="cSd-XC-OCD"/>
+                            <constraint firstItem="pCb-FC-Jbp" firstAttribute="leading" secondItem="zle-Je-kjT" secondAttribute="leading" id="ghs-2j-zNj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Characters" id="Tbn-8k-afk"/>
+                    <connections>
+                        <outlet property="tableView" destination="pCb-FC-Jbp" id="R0L-yC-g1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPa-sP-zRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,5 +61,8 @@
     </scenes>
     <resources>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
