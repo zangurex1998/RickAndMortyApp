@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Episodes-->
+        <scene sceneID="bpe-47-nhw">
+            <objects>
+                <viewController storyboardIdentifier="episodes" id="mlX-VA-Rgd" customClass="EpisodesViewController" customModule="RickAndMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sYi-FR-KBd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="22T-l0-TG7"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Episodes" id="SMv-jt-XEv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EAP-jW-avR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2405.3435114503814" y="-320.42253521126764"/>
+        </scene>
+        <!--Episodes-->
+        <scene sceneID="UO7-uf-2Ca">
+            <objects>
+                <navigationController storyboardIdentifier="episodesNC" automaticallyAdjustsScrollViewInsets="NO" id="R28-AZ-dRV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Episodes" image="tv" catalog="system" id="elZ-Yb-jdY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="V27-nF-3qm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mlX-VA-Rgd" kind="relationship" relationship="rootViewController" id="hsu-3X-xF7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9m0-dX-Ml9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1478.6259541984732" y="-320.42253521126764"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tv" catalog="system" width="128" height="95"/>
+    </resources>
+</document>
