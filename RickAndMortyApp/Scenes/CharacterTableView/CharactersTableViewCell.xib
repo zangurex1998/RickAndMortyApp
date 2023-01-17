@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7a-vd-xcB">
-                        <rect key="frame" x="185" y="120.33333333333333" width="46" height="25.666666666666671"/>
+                        <rect key="frame" x="185" y="120.33333333333333" width="208" height="25.666666666666671"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="21"/>
                         <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -48,6 +48,7 @@
                 <constraints>
                     <constraint firstItem="F7a-vd-xcB" firstAttribute="top" secondItem="GHw-V7-buS" secondAttribute="bottom" constant="25" id="4yn-DG-Ag9"/>
                     <constraint firstItem="xYn-CQ-kHG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="29" id="9e1-Fn-4SD"/>
+                    <constraint firstAttribute="trailing" secondItem="F7a-vd-xcB" secondAttribute="trailing" constant="10" id="Kpl-5y-A0L"/>
                     <constraint firstItem="1WN-6D-cZD" firstAttribute="top" secondItem="F7a-vd-xcB" secondAttribute="bottom" constant="25" id="OpM-lN-qqk"/>
                     <constraint firstAttribute="bottom" secondItem="1WN-6D-cZD" secondAttribute="bottom" constant="39" id="YSf-QG-WYk"/>
                     <constraint firstItem="GHw-V7-buS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="70" id="gaO-Gx-0bz"/>
