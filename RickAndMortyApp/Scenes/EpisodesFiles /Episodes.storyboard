@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="sYi-FR-KBd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="87H-S4-t42">
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="22T-l0-TG7"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="87H-S4-t42" firstAttribute="top" secondItem="22T-l0-TG7" secondAttribute="top" id="1jl-6g-Zzk"/>
+                            <constraint firstItem="87H-S4-t42" firstAttribute="leading" secondItem="22T-l0-TG7" secondAttribute="leading" id="Gre-DZ-OoH"/>
+                            <constraint firstItem="22T-l0-TG7" firstAttribute="trailing" secondItem="87H-S4-t42" secondAttribute="trailing" id="TQS-i7-vMj"/>
+                            <constraint firstItem="22T-l0-TG7" firstAttribute="bottom" secondItem="87H-S4-t42" secondAttribute="bottom" id="kGr-N0-I8f"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Episodes" id="SMv-jt-XEv"/>
+                    <connections>
+                        <outlet property="episodesTableView" destination="87H-S4-t42" id="4wi-ou-WC9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAP-jW-avR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,5 +61,8 @@
     </scenes>
     <resources>
         <image name="tv" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
