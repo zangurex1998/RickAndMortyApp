@@ -12,7 +12,7 @@ class CharacterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Properties
-    
+    let searchController = UISearchController()
     var apiManger : APIManagerProtocol = APIManager()
     var fetchedINfo : [Character] = []{
         didSet{
@@ -27,7 +27,7 @@ class CharacterViewController: UIViewController {
         apiManger.fetchInfo(endpoint: .character) { character in
             self.fetchedINfo = character.results
         }
-       
+        setUpSearchController()
         
         
     }
@@ -38,6 +38,10 @@ class CharacterViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CharactersTableViewCell".self, bundle: nil), forCellReuseIdentifier: "CharactersTableViewCell")
         tableView.backgroundColor = .black
+    }
+    private func setUpSearchController(){
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
     }
 
   
@@ -55,6 +59,24 @@ extension CharacterViewController : UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharactersTableViewCell") as! CharactersTableViewCell
         cell.configure(character: fetchedINfo[indexPath.row])
         return cell
+    }
+    
+    
+}
+//MARK: - extension : UISearchResultsUpdating
+extension CharacterViewController : UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {return}
+        if text.isEmpty{
+            apiManger.fetchInfo(endpoint: .character) { character in
+                self.fetchedINfo = character.results
+              
+            }
+           
+        }else{
+            self.fetchedINfo = self.fetchedINfo.filter{$0.name.lowercased().contains(text.lowercased())}
+        }
+        self.tableView.reloadData()
     }
     
     
