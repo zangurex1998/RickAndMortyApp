@@ -17,6 +17,10 @@
 		808BAE302977013B00FD4596 /* Episodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808BAE2F2977013B00FD4596 /* Episodes.storyboard */; };
 		808BAE322977014900FD4596 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BAE312977014900FD4596 /* EpisodesViewController.swift */; };
 		808BAE342977018200FD4596 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BAE332977018200FD4596 /* TabBarController.swift */; };
+		808BAE372977032500FD4596 /* RMmodelCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BAE362977032500FD4596 /* RMmodelCharacters.swift */; };
+		808BAE3A2977033E00FD4596 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BAE392977033E00FD4596 /* APIManager.swift */; };
+		808BAE3C2977074100FD4596 /* EpisodesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BAE3B2977074100FD4596 /* EpisodesModel.swift */; };
+		808BAE3E2977078000FD4596 /* EpisodesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BAE3D2977078000FD4596 /* EpisodesAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		808BAE2F2977013B00FD4596 /* Episodes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Episodes.storyboard; sourceTree = "<group>"; };
 		808BAE312977014900FD4596 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		808BAE332977018200FD4596 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		808BAE362977032500FD4596 /* RMmodelCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMmodelCharacters.swift; sourceTree = "<group>"; };
+		808BAE392977033E00FD4596 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		808BAE3B2977074100FD4596 /* EpisodesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesModel.swift; sourceTree = "<group>"; };
+		808BAE3D2977078000FD4596 /* EpisodesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,8 @@
 		808BAE242976F30400FD4596 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				808BAE382977032800FD4596 /* RMAPIManager */,
+				808BAE352977030F00FD4596 /* Model */,
 				808BAE272976F32400FD4596 /* Launch */,
 				808BAE282977009E00FD4596 /* TabBar */,
 				808BAE292977010500FD4596 /* CharacetersFiles */,
@@ -141,6 +151,24 @@
 				808BAE312977014900FD4596 /* EpisodesViewController.swift */,
 			);
 			path = "EpisodesFiles ";
+			sourceTree = "<group>";
+		};
+		808BAE352977030F00FD4596 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				808BAE362977032500FD4596 /* RMmodelCharacters.swift */,
+				808BAE3B2977074100FD4596 /* EpisodesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		808BAE382977032800FD4596 /* RMAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				808BAE392977033E00FD4596 /* APIManager.swift */,
+				808BAE3D2977078000FD4596 /* EpisodesAPIManager.swift */,
+			);
+			path = RMAPIManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +247,12 @@
 				808BAE2D2977012B00FD4596 /* CharacterViewController.swift in Sources */,
 				808BAE102976F24F00FD4596 /* AppDelegate.swift in Sources */,
 				808BAE322977014900FD4596 /* EpisodesViewController.swift in Sources */,
+				808BAE3C2977074100FD4596 /* EpisodesModel.swift in Sources */,
 				808BAE342977018200FD4596 /* TabBarController.swift in Sources */,
+				808BAE372977032500FD4596 /* RMmodelCharacters.swift in Sources */,
+				808BAE3E2977078000FD4596 /* EpisodesAPIManager.swift in Sources */,
 				808BAE122976F24F00FD4596 /* SceneDelegate.swift in Sources */,
+				808BAE3A2977033E00FD4596 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
