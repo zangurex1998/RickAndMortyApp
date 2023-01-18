@@ -61,7 +61,14 @@ extension EpisodesViewController : UITableViewDataSource{
 }
 //MARK: - Extension - UITableViewDelegate
 extension EpisodesViewController : UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "EpisodePlayer", bundle: nil).instantiateViewController(withIdentifier: "videoPlayer") as! EpisodePlayerViewController
+        vc.video = episodes[indexPath.row].url
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
 }
 //MARK: - Extension - SearchController
 
